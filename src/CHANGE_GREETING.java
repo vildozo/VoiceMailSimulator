@@ -1,5 +1,5 @@
 
-public class CHANGE_GREETING {
+public class CHANGE_GREETING implements ConnectedState{
 	
 	public CHANGE_GREETING(){}
 
@@ -8,7 +8,7 @@ public class CHANGE_GREETING {
 	      @param key the phone key pressed by the user
 	 * @param connection TODO
 	   */
-	   void changeGreeting(String key, Connection connection)
+	   public void dial(String key, Connection connection)
 	   {
 	      if (key.equals("#"))
 	      {

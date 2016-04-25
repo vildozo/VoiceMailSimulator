@@ -1,5 +1,5 @@
 
-public class MAILBOX_MENU {
+public class MAILBOX_MENU  implements ConnectedState{{
 	public MAILBOX_MENU() {}
 
 	/**
@@ -7,7 +7,7 @@ public class MAILBOX_MENU {
 	      @param key the phone key pressed by the user
 	 * @param connection TODO
 	   */
-	   void mailboxMenu(String key, Connection connection)
+	   public void dial(String key, Connection connection)
 	   {
 	      if (key.equals("1"))
 	      {

@@ -6,7 +6,7 @@ public class RecordingState {
 	      @param key the phone key pressed by the user
 	 * @param connection TODO
 	   */
-	   void login(String key, Connection connection)
+	   void dial(String key, Connection connection)
 	   {
 	      if (key.equals("#"))
 	      {

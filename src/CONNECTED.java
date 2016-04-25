@@ -1,5 +1,5 @@
 
-public class CONNECTED {
+public class CONNECTED  implements ConnectedState{{
 
 	/**
 	      Try to connect the user with the specified mailbox.
@@ -8,7 +8,7 @@ public class CONNECTED {
 	   */
 	public CONNECTED(){}
 	
-	   void connect(String key, Connection connection)
+	   public void dial(String key, Connection connection)
 	   {
 	      if (key.equals("#"))
 	      {

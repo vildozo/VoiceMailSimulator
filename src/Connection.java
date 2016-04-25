@@ -25,6 +25,7 @@ public class Connection
 	   static final int MESSAGE_MENU = 4;
 	   static final int CHANGE_PASSCODE = 5;
 	   static final int CHANGE_GREETING = 6;
+	   static final int CONTACT_MENU=7;
 
 	   private static final String INITIAL_PROMPT = 
 	         "Enter mailbox number followed by #";      
@@ -63,21 +64,35 @@ public class Connection
    */
    public void dial(String key)
    {
+	    //ConnectionState currentState=null;
       if (state == CONNECTED)
-         new CONNECTED().connect(key, this);
+    	  
+    	  ConnectionState currentState = new ConnectedState()
+    	  currentState.dial(key, this);
+    	  
+         new CONNECTED().dial(key, this);
       else if (state == RECORDING)
-         new RecordingState().login(key, this);
+         new RecordingState().dial(key, this);
       else if (state == CHANGE_PASSCODE)
-         new CHANGE_PASSCODE().changePasscode(key, this);
+         new CHANGE_PASSCODE().dial(key, this);
       else if (state == CHANGE_GREETING)
-         new CHANGE_GREETING().changeGreeting(key, this);
+         new CHANGE_GREETING().dial(key, this);
       else if (state == MAILBOX_MENU)
-         new MAILBOX_MENU().mailboxMenu(key, this);
+         new MAILBOX_MENU().dial(key, this);
       else if (state == MESSAGE_MENU)
-         new MESSAGE_MENU().messageMenu(key, this);
+         new MESSAGE_MENU().dial(key, this);
+      else if (state == CONTACT_MENU)
+    	  contactMenu();
+      
+      //currentState.dial(key, this);
    }
 
-   /**
+   private void contactMenu() {
+	
+	
+}
+
+/**
       Record voice.
       @param voice voice spoken by the user
    */

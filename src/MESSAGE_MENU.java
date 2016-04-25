@@ -7,7 +7,7 @@ public class MESSAGE_MENU {
 	      @param key the phone key pressed by the user
 	 * @param connection TODO
 	   */
-	   void messageMenu(String key, Connection connection)
+	   void dial(String key, Connection connection)
 	   {
 	      if (key.equals("1"))
 	      {

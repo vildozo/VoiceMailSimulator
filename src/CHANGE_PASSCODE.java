@@ -1,5 +1,5 @@
 
-public class CHANGE_PASSCODE {
+public class CHANGE_PASSCODE  implements ConnectedState{{
  
 	public CHANGE_PASSCODE(){}
 
@@ -8,7 +8,7 @@ public class CHANGE_PASSCODE {
 	      @param key the phone key pressed by the user
 	 * @param connection TODO
 	   */
-	   void changePasscode(String key, Connection connection)
+	   public void dial(String key, Connection connection)
 	   {
 	      if (key.equals("#"))
 	      {
